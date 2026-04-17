@@ -1,0 +1,67 @@
+{
+  "name": "code-to-city",
+  "displayName": "Code-to-City",
+  "description": "Architectural SimCity: Visualize your codebase as an interactive 3D city. When build fails, the faulty module catches fire!",
+  "version": "2.2.1",
+  "publisher": "Nacho",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:code-to-city.open"
+  ],
+  "main": "./out/extension.js",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hubinoretros/code-to-city"
+  },
+  "bugs": {
+    "url": "https://github.com/hubinoretros/code-to-city/issues"
+  },
+  "homepage": "https://github.com/hubinoretros/code-to-city",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-to-city.open",
+        "title": "Code-to-City: Open City",
+        "icon": "$(globe)"
+      },
+      {
+        "command": "code-to-city.refresh",
+        "title": "Code-to-City: Refresh City",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "code-to-city.firefighter",
+        "title": "Code-to-City: Firefighter",
+        "icon": "$(flame)"
+      }
+    ],
+    "configuration": {
+      "title": "Code-to-City",
+      "properties": {
+        "codeToCity.fireDuration": {
+          "type": "number",
+          "default": 5000,
+          "description": "Fire duration in milliseconds"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.75.0",
+    "@vscode/vsce": "^2.21.0",
+    "typescript": "^5.0.0"
+  }
+}
