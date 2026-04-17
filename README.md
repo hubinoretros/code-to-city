@@ -21,7 +21,7 @@ C#, JavaScript/TypeScript, Python, Java, Go, Rust, C/C++, Ruby, PHP, Swift, Kotl
 ## Installation
 
 ```bash
-code --install-extension code-to-city-2.2.0.vsix
+code --install-extension code-to-city-2.2.1.vsix
 ```
 
 Or install directly from the Extensions panel in VSCode.
